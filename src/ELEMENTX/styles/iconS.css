@@ -1,0 +1,5 @@
+.icn-a:hover :first-child{
+    transition: all;
+    transition-duration: .5s;
+    color: #9f8700
+}

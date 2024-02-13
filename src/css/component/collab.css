@@ -1,0 +1,44 @@
+.cl-ctn {
+    overflow-y: auto;
+    width:100%;
+    
+}
+.cl-child {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+    padding: 20px 40px;
+    animation-name: logo_card;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* overflow: auto; */
+}
+
+@keyframes logo_card {
+    0% {
+        transform: translateX(0);
+    }
+ 
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.cl-ctn::-webkit-scrollbar {
+    display: none;
+}
+.cl-card {
+    width:350px;
+    height: 140px;
+}
+.cl-card2 {
+    width:350px;
+    height: 140px;
+    background-color: black;
+}
+

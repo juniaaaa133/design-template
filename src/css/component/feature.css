@@ -1,0 +1,77 @@
+.fe-card-ctn {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:15px;
+    padding: 0 40px;
+    justify-content: center;
+}
+.fe-card {
+    width: 31%;
+    height: 340px;
+    /* background-color: rgb(61, 202, 5); */
+    border-radius: 20px;
+    border: solid 2px #E59618;
+    position: relative;
+    overflow: hidden;
+
+}
+.layout3 {
+    position: absolute;
+    width:120px;
+    height: 120px;
+    top:-150px;
+    right: -40px;
+    opacity: .8;
+}
+.fe-card:hover {
+    border: solid 2px #a1a1a1;
+
+}
+.fe-card:hover .fe-title {
+    color:#80530b;
+
+}
+.fe-contact-ctn {
+    position: absolute;
+    z-index: 2;
+    width: 85%;
+    height: fit-content;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 990px) {
+    .fe-card {
+        /* width: 47%; */
+        height: 200px;
+        /* background-color: rgb(61, 202, 5); */
+ 
+    }
+}
+@media (max-width: 768px) {
+    .fe-card-ctn {
+        gap:10px;
+        padding: 0 20px;
+    }
+    .fe-card {
+        width: 48%;
+        height: 240px;
+        /* background-color: rgb(61, 202, 5); */
+ 
+    }
+}
+@media (max-width: 480px) {
+    .fe-card {
+        width: 95%;
+        height: 300px; 
+    }
+}

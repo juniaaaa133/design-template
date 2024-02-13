@@ -1,0 +1,9 @@
+@import './page/nav.css';
+@import './page/home.css';
+@import './page/community.css';
+@import './component/about.css';
+@import './component/contact.css';
+@import './component/service.css';
+@import './component/process.css';
+@import './component/feature.css';
+@import './component/collab.css';

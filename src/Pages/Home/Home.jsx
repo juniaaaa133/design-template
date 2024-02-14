@@ -7,7 +7,8 @@ import Feature from '../../Component/Feature';
 import Collab from '../../Component/Collab';
 import Aboutus from '../../Component/Aboutus';
 import Contact from '../../Component/Contact';
-import { Fade } from 'react-reveal';
+import {motion} from 'framer-motion';
+
 const Home = () => {
 
 let hero_title = "Designer's Design";
@@ -23,8 +24,11 @@ let hero_button_text = "Contact Us Now";
   <img src={require('../../img/layout1.png')} alt="" className='layout1'/>
   <img src={require('../../img/layout2.png')} alt="" className='layout2'/>
   <img src={require('../../img/layout2.png')} alt="" className='layouth3'/>
-  <Fade bottom cascade>
-  <div className="hm-main-div">
+  <motion.div 
+   initial={{ opacity: 0,  translateY : 200 }}
+   animate={{ opacity: 1, translateY : 0}}
+     transition={{ delay: 0,duration : 0.6}}
+   >  <div className="hm-main-div">
     <div className="hm-title-ctn">
       <div className="hm-bar bg-sec"></div>
       <div className="hm-title sec text-[13px] font-[500] main-f">{hero_title}</div>
@@ -37,7 +41,7 @@ let hero_button_text = "Contact Us Now";
       <ButtonC text={hero_button_text} />
     </div>
   </div>
-  </Fade>
+  </motion.div>
   </div>
 
 <Service/>

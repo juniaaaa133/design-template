@@ -1,11 +1,15 @@
 import React from 'react'
 import { data } from '../api/template_control'
-import { Fade } from 'react-reveal'
+import {motion} from 'framer-motion'
 
 const Collab = ({Ref}) => {
   return (
-  <Fade bottom cascade>
-  <div id='work' className="big-bar">
+    <motion.div 
+    initial={{ opacity: 0,  translateY : 200 }}
+    animate={{ opacity: 1, translateY : 0}}
+      transition={{ delay: 0,duration : 0.6}}
+    >
+          <div id='work' className="big-bar">
           <div className="srv-title-ctn ">
                     <div className="srv-title font-cl font-[700] text-[28px] main-f">{data.logo_works.title}</div>
                     <div className="srv-line bg-sec"></div>
@@ -27,7 +31,7 @@ const Collab = ({Ref}) => {
         </div>
     </div>
     </div>
-  </Fade>
+    </motion.div>
   )
 }
 

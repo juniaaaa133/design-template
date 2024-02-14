@@ -1,12 +1,15 @@
 import React from 'react'
 import InputR from '../ELEMENTX/Ui/Input/InputR'
 import ButtonC from '../ELEMENTX/Ui/Buttons/ButtonC'
-import { Fade } from 'react-reveal'
+import {motion} from 'framer-motion'
 
 const Contact = ({Ref }) => {
   return (
-<Fade bottom cascade>
-<form id='contact' className='cot-main-ctn'>
+    <motion.div 
+    initial={{ opacity: 0,  translateY : 200 }}
+    animate={{ opacity: 1, translateY : 0}}
+      transition={{ delay: 0,duration : 0.6}}
+    ><form id='contact' className='cot-main-ctn'>
         <div className="cot-intro">
         <div className="cot-title sec text-[13px] sec-f font-cl">CONTACT US</div>
         <div className="cot-desc text-[29px] font-cl sec-f">Ask anything you want to know</div>
@@ -36,7 +39,7 @@ const Contact = ({Ref }) => {
             <ButtonC text={'submit '}/>
         </div>
     </form>
-</Fade>
+</motion.div>
   )
 }
 

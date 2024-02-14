@@ -1,12 +1,16 @@
 import React from 'react'
 import { data } from '../api/template_control'
-import { Fade } from 'react-reveal'
+import {motion} from 'framer-motion'
 
 const Process = () => {
   return (
     <div className='pro-ctn'>
         <div className="pro-layer1"></div>
-<Fade bottom cascade>
+        <motion.div 
+   initial={{ opacity: 0,  translateY : 200 }}
+   animate={{ opacity: 1, translateY : 0}}
+     transition={{ delay: 0,duration : 0.6}}
+   >
 <div className="pro-abs">
     <div className="pro-title-ctn">
             <div className="pro-header text-[13px] sec font-[700] main-f">{data.process_section.header.title}</div>
@@ -35,12 +39,9 @@ const Process = () => {
             </div>
         ))
        }
-    
-      
    </div>
-
     </div>
-</Fade>
+</motion.div>
     </div>
   )
 }

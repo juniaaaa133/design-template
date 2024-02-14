@@ -1,11 +1,15 @@
 import React from 'react'
 import { data } from '../api/template_control'
-import { Fade } from 'react-reveal'
+import {motion} from 'framer-motion'
 
 const Feature = () => {
   return (
+    <motion.div 
+    initial={{ opacity: 0,  translateY : 200 }}
+    animate={{ opacity: 1, translateY : 0}}
+      transition={{ delay: 0,duration : 0.6}}
+    >
     <div className='fe-ctn big-bar'>
-<Fade bottom cascade>
 <div className="pro-title-ctn">
             <div className="pro-header text-[13px] sec font-[700] main-f">OUR FEATURES</div>
             <div className="pro-title text-[32px] font-[600] main-f font-cl ">The best collaboration features</div>
@@ -28,8 +32,8 @@ const Feature = () => {
     }
 
         </div>
-</Fade>
                    </div>
+    </motion.div>
   )
 }
 
